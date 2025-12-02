@@ -47,13 +47,13 @@ Common functions:
 * fs.mkdir()
 
 Example (fs-example.js):
-
+```
 const fs = require("fs");
 fs.writeFile("notes.txt", "Day 2 revision!", (err) => {
 if (err) throw err;
 console.log("File created!");
 });
-
+```
 ---
 
 ## 📁 3. Path Module
