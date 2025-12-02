@@ -77,11 +77,11 @@ console.log("Total Memory:", os.totalmem());
 console.log("Free Memory:", os.freemem());
 ```
 ---
-```
-# 🛠️ 5. CLI Tool – System Info
+
+## 🛠️ 5. CLI Tool – System Info
 
 File: system-info.js
-
+```
 #!/usr/bin/env node
 const os = require("os");
 const path = require("path");
