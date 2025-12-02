@@ -1,7 +1,15 @@
+Understood Rohit —
+GitHub is not showing formatting because of **nested code blocks**.
+So here is your README in **pure terminal-style plain text**, with **NO markdown code blocks inside**, so GitHub will render it perfectly.
+
+Just **copy–paste EXACTLY as it is** into your README.md.
+
+---
+
 # 📘 Backend Revision – Day 2
 
-Day 2 of my backend revision streak.  
-Today's topics: **Modules, CommonJS, File System (fs), Path module, OS module, and a CLI Tool for System Info**.
+Day 2 of my backend revision streak.
+Today's topics: Modules, CommonJS, File System (fs), Path, OS, and a CLI Tool for System Info.
 
 ---
 
@@ -10,84 +18,76 @@ Today's topics: **Modules, CommonJS, File System (fs), Path module, OS module, a
 backend-revision-day2/
 │── system-info.js
 │── examples/
-│ ├── fs-example.js
-│ ├── path-example.js
-│ └── os-example.js
+│   ├── fs-example.js
+│   ├── path-example.js
+│   └── os-example.js
 │── package.json
 │── README.md
-
-yaml
-Copy code
 
 ---
 
 ## 🧩 1. Node.js Modules (CommonJS)
 
-### ✔ Definition  
-Modules are reusable pieces of code used to structure a Node.js application.
+Definition:
+Modules are reusable pieces of code that help structure a Node.js project.
 
-### ✔ Module Types  
-- **Core Modules:** fs, path, os, http  
-- **Local Modules:** your own created files  
-- **Third-Party Modules:** installed using npm (chalk, express, etc.)
+Types of Modules:
 
-### ✔ CommonJS Syntax  
-**Export**
-```js
-module.exports = { add };
-Import
+* Core Modules → fs, path, os
+* Local Modules → your own files
+* Third-Party Modules → npm packages
 
-js
-Copy code
-const { add } = require("./math");
+CommonJS Syntax:
+Export: module.exports = { add }
+Import: const { add } = require("./math")
 
-```
-📁 2. File System (fs Module)
-Commonly used functions:
+---
 
-fs.readFile()
+## 📁 2. File System (fs Module)
 
-fs.writeFile()
+Common functions:
 
-fs.appendFile()
+* fs.readFile()
+* fs.writeFile()
+* fs.appendFile()
+* fs.unlink()
+* fs.mkdir()
 
-fs.unlink()
+Example (fs-example.js):
 
-fs.mkdir()
-
-Example (fs-example.js)
-js
-Copy code
 const fs = require("fs");
-
 fs.writeFile("notes.txt", "Day 2 revision!", (err) => {
-  if (err) throw err;
-  console.log("File created!");
+if (err) throw err;
+console.log("File created!");
 });
 
-### 📁 3. Path Module
-Example (path-example.js)
-js
-Copy code
-const path = require("path");
+---
 
+## 📁 3. Path Module
+
+Example (path-example.js):
+
+const path = require("path");
 console.log(__dirname);
 console.log(path.join(__dirname, "data", "demo.txt"));
-### 💻 4. OS Module
-Example (os-example.js)
-js
-Copy code
-const os = require("os");
 
+---
+
+## 💻 4. OS Module
+
+Example (os-example.js):
+
+const os = require("os");
 console.log("OS Type:", os.type());
 console.log("Total Memory:", os.totalmem());
 console.log("Free Memory:", os.freemem());
-🛠️ 5. CLI Tool – System Info
-A custom CLI tool that prints your system information directly in the terminal.
 
-system-info.js
-js
-Copy code
+---
+
+# 🛠️ 5. CLI Tool – System Info
+
+File: system-info.js
+
 #!/usr/bin/env node
 const os = require("os");
 const path = require("path");
@@ -96,52 +96,56 @@ console.log("=== System Information ===");
 console.log("OS Type:", os.type());
 console.log("Platform:", os.platform());
 console.log("CPU Cores:", os.cpus().length);
-console.log(
-  "Total Memory:",
-  (os.totalmem() / 1024 / 1024 / 1024).toFixed(2),
-  "GB"
-);
-console.log(
-  "Free Memory:",
-  (os.freemem() / 1024 / 1024 / 1024).toFixed(2),
-  "GB"
-);
+console.log("Total Memory:", (os.totalmem() / 1024 / 1024 / 1024).toFixed(2), "GB");
+console.log("Free Memory:", (os.freemem() / 1024 / 1024 / 1024).toFixed(2), "GB");
 console.log("Home Directory:", os.homedir());
 console.log("Example File Path:", path.join(__dirname, "example.txt"));
-🔧 Make It Work as a CLI Command
-Step 1: Add this to package.json
-json
-Copy code
+
+---
+
+## 🔧 Make It a CLI Command
+
+1. Add inside package.json:
+
 "bin": {
-  "sys-info": "./system-info.js"
+"sys-info": "./system-info.js"
 }
-Step 2: Provide execute permission (Mac/Linux)
-perl
-Copy code
-chmod +x system-info.js
-Step 3: Link globally
-bash
-Copy code
-npm link
-Step 4: Run your CLI
-pgsql
-Copy code
-sys-info
-🟢 Day 2 Completed
-Topics Covered
 
+2. Give execute permission (Mac/Linux):
+   chmod +x system-info.js
+
+3. Link globally:
+   npm link
+
+4. Run:
+   sys-info
+
+---
+
+# 🟢 Day 2 Completed
+
+Topics Covered:
 ✔ Modules (CommonJS)
-
 ✔ fs Module
-
 ✔ path Module
-
 ✔ os Module
-
 ✔ CLI Tool
 
-Streak Progress
-
+Streak Progress:
 ✔ Day 1 — Node + NPM + Setup
-
 ✔ Day 2 — Modules + FS + CLI Tool
+⬜ Day 3 — Events, EventEmitter, Streams
+⬜ Day 4 — MongoDB + Mongoose
+⬜ Day 5 — JWT Authentication
+
+---
+
+# ⭐ Notes for Future Me
+
+* Keep uploading daily
+* Micro projects build deep understanding
+* Consistency builds mastery
+
+---
+
+If you want, I can prepare **Day 3 Revision + Terminal-style README** same format.
