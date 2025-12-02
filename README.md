@@ -1,11 +1,3 @@
-Understood Rohit —
-GitHub is not showing formatting because of **nested code blocks**.
-So here is your README in **pure terminal-style plain text**, with **NO markdown code blocks inside**, so GitHub will render it perfectly.
-
-Just **copy–paste EXACTLY as it is** into your README.md.
-
----
-
 # 📘 Backend Revision – Day 2
 
 Day 2 of my backend revision streak.
@@ -38,9 +30,10 @@ Types of Modules:
 * Third-Party Modules → npm packages
 
 CommonJS Syntax:
+```
 Export: module.exports = { add }
 Import: const { add } = require("./math")
-
+```
 ---
 
 ## 📁 2. File System (fs Module)
@@ -76,14 +69,14 @@ console.log(path.join(__dirname, "data", "demo.txt"));
 ## 💻 4. OS Module
 
 Example (os-example.js):
-
+```
 const os = require("os");
 console.log("OS Type:", os.type());
 console.log("Total Memory:", os.totalmem());
 console.log("Free Memory:", os.freemem());
-
+```
 ---
-
+```
 # 🛠️ 5. CLI Tool – System Info
 
 File: system-info.js
@@ -100,7 +93,7 @@ console.log("Total Memory:", (os.totalmem() / 1024 / 1024 / 1024).toFixed(2), "G
 console.log("Free Memory:", (os.freemem() / 1024 / 1024 / 1024).toFixed(2), "GB");
 console.log("Home Directory:", os.homedir());
 console.log("Example File Path:", path.join(__dirname, "example.txt"));
-
+```
 ---
 
 ## 🔧 Make It a CLI Command
