@@ -1,92 +1,90 @@
 # Day-2-Backend-Revise-
 📘 Backend Revision – Day 2 Topics:  ✔ Modules (CommonJS) ✔ File System (fs) ✔ Path (path) ✔ OS Module (os) ✔ Build a CLI tool to show system info
 
+# 📘 Backend Revision – Day 2
 
-🧩 1. What Are Modules in Node.js?
-Interview-Ready Definition
+Day 2 of my backend revision streak.  
+Today's goal: **Modules, File System, CommonJS, fs, path, os, and a CLI Tool for System Info.**
 
-“Modules in Node.js are reusable blocks of code that are isolated from other parts of the application. They help structure the code into smaller pieces using import/export.”
+---
 
-Types of Modules
+## 📂 Project Structure
 
-Core Modules
-→ Already built into Node
-Example: fs, path, os, http, events
+backend-revision-day2/
+│── system-info.js
+│── examples/
+│ ├── fs-example.js
+│ ├── path-example.js
+│ └── os-example.js
+│── package.json
+│── README.md
 
-Local Modules
-→ Created by you
-Example: ./utils.js, ./math.js
+yaml
+Copy code
 
-Third-Party Modules
-→ Installed through npm
-Example: chalk, dotenv, express
+---
 
-🧱 2. CommonJS (CJS) Syntax
+## 🧩 1. Node.js Modules (CommonJS)
 
-CJS is the default module system in Node (older but widely used).
+### 📌 Definition  
+Modules are reusable pieces of code that we import/export to structure a project.
 
-Export
-// math.js
-function add(a, b) {
-  return a + b;
-}
+### 📌 Types of Modules  
+- **Core modules** → fs, path, os, http  
+- **Local modules** → custom files  
+- **Third-party modules** → installed via npm  
 
+### 📌 CommonJS Syntax  
+**Export**
+```js
 module.exports = { add };
-
 Import
-const { add } = require("./math");
-console.log(add(5, 10));
 
-📂 3. fs Module (File System)
-Common Functions
-Purpose	Function
-Read file	fs.readFile()
-Write file	fs.writeFile()
-Append	fs.appendFile()
-Delete file	fs.unlink()
-Create folder	fs.mkdir()
-Example
+js
+Copy code
+const { add } = require("./math");
+📁 2. fs Module (File System)
+Common operations:
+
+js
+Copy code
+fs.readFile()
+fs.writeFile()
+fs.appendFile()
+fs.unlink()
+fs.mkdir()
+Example (fs-example.js)
+js
+Copy code
 const fs = require("fs");
 
-fs.writeFile("notes.txt", "Day 2 revision started!", (err) => {
+fs.writeFile("notes.txt", "Day 2 revision!", (err) => {
   if (err) throw err;
-  console.log("File created");
+  console.log("File created!");
 });
-
-📁 4. path Module
-Why we use it?
-
-To handle file paths properly (avoids errors on Windows/Linux).
-
-Example
+📁 3. path Module
+Example (path-example.js)
+js
+Copy code
 const path = require("path");
 
-console.log(__filename);       
-console.log(__dirname);        
-
-const fullPath = path.join(__dirname, "src", "data.txt");
-console.log(fullPath);
-
-💻 5. os Module
-Useful Functions
-Purpose	Method
-CPU info	os.cpus()
-Free memory	os.freemem()
-Total memory	os.totalmem()
-Hostname	os.hostname()
-OS Type	os.type()
-Example
+console.log(__dirname);
+console.log(path.join(__dirname, "data", "demo.txt"));
+💻 4. os Module
+Example (os-example.js)
+js
+Copy code
 const os = require("os");
 
-console.log("OS:", os.type());
+console.log("OS Type:", os.type());
 console.log("Total Memory:", os.totalmem());
 console.log("Free Memory:", os.freemem());
+🛠️ 5. CLI Tool – System Info
+Created a custom CLI tool to print system information.
 
-🛠️ 6. Build a CLI Tool to Show System Info
-
-This will be your practical mini-project for Day 2.
-
-Step 1 — Create file: system-info.js
+system-info.js
+js
+Copy code
 #!/usr/bin/env node
 const os = require("os");
 const path = require("path");
@@ -98,36 +96,28 @@ console.log("CPU Cores:", os.cpus().length);
 console.log("Total Memory:", (os.totalmem() / 1024 / 1024 / 1024).toFixed(2), "GB");
 console.log("Free Memory:", (os.freemem() / 1024 / 1024 / 1024).toFixed(2), "GB");
 console.log("Home Directory:", os.homedir());
-console.log("File Path Example:", path.join(__dirname, "example.txt"));
+console.log("Example File Path:", path.join(__dirname, "example.txt"));
+🔧 Make it a CLI Command
+Add inside package.json:
 
-Step 2 — Make it a CLI command
-
-Add this in package.json:
-
+json
+Copy code
 "bin": {
   "sys-info": "./system-info.js"
 }
+Give permission (macOS/Linux):
 
-Step 3 — Give execute permission
-
-(Required on macOS/Linux)
-
+perl
+Copy code
 chmod +x system-info.js
+Link globally:
 
-Step 4 — Install globally (for testing)
+bash
+Copy code
 npm link
+Run CLI:
 
-Step 5 — Run your CLI
+pgsql
+Copy code
 sys-info
-
-
-You will see complete system information on terminal.
-
-🟩 Day 2 Completed!
-
-You learned:
-✔ CommonJS modules
-✔ fs module
-✔ path module
-✔ os module
-✔ Built your own CLI tool (professional-level practice)
+🟢 Day 2 Completed!
