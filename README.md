@@ -4,7 +4,7 @@ Day 2 of my backend revision streak.
 Today's topics: Modules, CommonJS, File System (fs), Path, OS, and a CLI Tool for System Info.
 
 ---
-
+```
 ## 📂 Project Structure
 
 backend-revision-day2/
@@ -15,7 +15,7 @@ backend-revision-day2/
 │   └── os-example.js
 │── package.json
 │── README.md
-
+```
 ---
 
 ## 🧩 1. Node.js Modules (CommonJS)
