@@ -101,18 +101,20 @@ console.log("Example File Path:", path.join(__dirname, "example.txt"));
 
 1. Add inside package.json:
 
+```
 "bin": {
 "sys-info": "./system-info.js"
 }
+```
 
 2. Give execute permission (Mac/Linux):
-   chmod +x system-info.js
+   ```chmod +x system-info.js```
 
 3. Link globally:
-   npm link
+   ````npm link````
 
 4. Run:
-   sys-info
+   ````sys-info````
 
 ---
 
