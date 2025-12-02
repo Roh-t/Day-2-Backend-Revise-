@@ -57,13 +57,14 @@ console.log("File created!");
 ---
 
 ## 📁 3. Path Module
-
+```
 Example (path-example.js):
 
 const path = require("path");
 console.log(__dirname);
 console.log(path.join(__dirname, "data", "demo.txt"));
 
+```
 ---
 
 ## 💻 4. OS Module
