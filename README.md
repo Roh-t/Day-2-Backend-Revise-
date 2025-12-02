@@ -1,10 +1,7 @@
-# Day-2-Backend-Revise-
-📘 Backend Revision – Day 2 Topics:  ✔ Modules (CommonJS) ✔ File System (fs) ✔ Path (path) ✔ OS Module (os) ✔ Build a CLI tool to show system info
-
 # 📘 Backend Revision – Day 2
 
 Day 2 of my backend revision streak.  
-Today's goal: **Modules, File System, CommonJS, fs, path, os, and a CLI Tool for System Info.**
+Today's topics: **Modules, CommonJS, File System (fs), Path module, OS module, and a CLI Tool for System Info**.
 
 ---
 
@@ -26,15 +23,15 @@ Copy code
 
 ## 🧩 1. Node.js Modules (CommonJS)
 
-### 📌 Definition  
-Modules are reusable pieces of code that we import/export to structure a project.
+### ✔ Definition  
+Modules are reusable pieces of code used to structure a Node.js application.
 
-### 📌 Types of Modules  
-- **Core modules** → fs, path, os, http  
-- **Local modules** → custom files  
-- **Third-party modules** → installed via npm  
+### ✔ Module Types  
+- **Core Modules:** fs, path, os, http  
+- **Local Modules:** your own created files  
+- **Third-Party Modules:** installed using npm (chalk, express, etc.)
 
-### 📌 CommonJS Syntax  
+### ✔ CommonJS Syntax  
 **Export**
 ```js
 module.exports = { add };
@@ -43,16 +40,21 @@ Import
 js
 Copy code
 const { add } = require("./math");
-📁 2. fs Module (File System)
-Common operations:
 
-js
-Copy code
+```
+📁 2. File System (fs Module)
+Commonly used functions:
+
 fs.readFile()
+
 fs.writeFile()
+
 fs.appendFile()
+
 fs.unlink()
+
 fs.mkdir()
+
 Example (fs-example.js)
 js
 Copy code
@@ -62,7 +64,8 @@ fs.writeFile("notes.txt", "Day 2 revision!", (err) => {
   if (err) throw err;
   console.log("File created!");
 });
-📁 3. path Module
+
+### 📁 3. Path Module
 Example (path-example.js)
 js
 Copy code
@@ -70,7 +73,7 @@ const path = require("path");
 
 console.log(__dirname);
 console.log(path.join(__dirname, "data", "demo.txt"));
-💻 4. os Module
+### 💻 4. OS Module
 Example (os-example.js)
 js
 Copy code
@@ -80,7 +83,7 @@ console.log("OS Type:", os.type());
 console.log("Total Memory:", os.totalmem());
 console.log("Free Memory:", os.freemem());
 🛠️ 5. CLI Tool – System Info
-Created a custom CLI tool to print system information.
+A custom CLI tool that prints your system information directly in the terminal.
 
 system-info.js
 js
@@ -93,31 +96,52 @@ console.log("=== System Information ===");
 console.log("OS Type:", os.type());
 console.log("Platform:", os.platform());
 console.log("CPU Cores:", os.cpus().length);
-console.log("Total Memory:", (os.totalmem() / 1024 / 1024 / 1024).toFixed(2), "GB");
-console.log("Free Memory:", (os.freemem() / 1024 / 1024 / 1024).toFixed(2), "GB");
+console.log(
+  "Total Memory:",
+  (os.totalmem() / 1024 / 1024 / 1024).toFixed(2),
+  "GB"
+);
+console.log(
+  "Free Memory:",
+  (os.freemem() / 1024 / 1024 / 1024).toFixed(2),
+  "GB"
+);
 console.log("Home Directory:", os.homedir());
 console.log("Example File Path:", path.join(__dirname, "example.txt"));
-🔧 Make it a CLI Command
-Add inside package.json:
-
+🔧 Make It Work as a CLI Command
+Step 1: Add this to package.json
 json
 Copy code
 "bin": {
   "sys-info": "./system-info.js"
 }
-Give permission (macOS/Linux):
-
+Step 2: Provide execute permission (Mac/Linux)
 perl
 Copy code
 chmod +x system-info.js
-Link globally:
-
+Step 3: Link globally
 bash
 Copy code
 npm link
-Run CLI:
-
+Step 4: Run your CLI
 pgsql
 Copy code
 sys-info
-🟢 Day 2 Completed!
+🟢 Day 2 Completed
+Topics Covered
+
+✔ Modules (CommonJS)
+
+✔ fs Module
+
+✔ path Module
+
+✔ os Module
+
+✔ CLI Tool
+
+Streak Progress
+
+✔ Day 1 — Node + NPM + Setup
+
+✔ Day 2 — Modules + FS + CLI Tool
