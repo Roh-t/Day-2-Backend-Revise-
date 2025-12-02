@@ -125,13 +125,14 @@ Topics Covered:
 ✔ os Module
 ✔ CLI Tool
 
+```
 Streak Progress:
 ✔ Day 1 — Node + NPM + Setup
 ✔ Day 2 — Modules + FS + CLI Tool
 ⬜ Day 3 — Events, EventEmitter, Streams
 ⬜ Day 4 — MongoDB + Mongoose
 ⬜ Day 5 — JWT Authentication
-
+```
 ---
 
 # ⭐ Notes for Future Me
